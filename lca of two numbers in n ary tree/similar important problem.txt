@@ -1,0 +1,7 @@
+https://www.geeksforgeeks.org/maximum-weighted-edge-in-path-between-two-nodes-in-an-n-ary-tree-using-binary-lifting/
+
+
+
+this is based on the same concept, here you also store the max edge value till 2^i th parent node for any node
+
+so by this you find the max edge value by using previous concept of finding the lca

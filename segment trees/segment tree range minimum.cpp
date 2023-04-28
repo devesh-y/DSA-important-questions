@@ -19,7 +19,7 @@ void build (vector<int> &arr, vector<int> &tree, int low,int high, int index){
     tree[index]=min(tree[index*2+1],tree[index*2+2]);
 
 }
-void update(int index, int low,int high, int l, int r, int i, int val){
+void update(int index, int low,int high, int l, int r, int i, int val,vector<int> &tree){
 
     if(low==high){
         tree[index]=val;
@@ -28,10 +28,10 @@ void update(int index, int low,int high, int l, int r, int i, int val){
 
     int mid=(low+high)/2;
     if(i<=mid && i>=low){
-        update(2*index+1, low,mid,l, r, i, val);
+        update(2*index+1, low,mid,l, r, i, val,tree);
     }
     else{
-        update(2*index+2, mid+1,high,l, r, i, val);
+        update(2*index+2, mid+1,high,l, r, i, val,tree);
     }
 
 
